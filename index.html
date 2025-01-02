@@ -8,6 +8,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="./styles/main.css">
+   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
    <title>Tutoria</title>
 </head>
 <body>
@@ -17,53 +18,108 @@
             <h1>Sua Agenda</h1>
             <p>Aqui você pode ver todos os agendamentos para hoje</p>
          </div>
-         <div>
-            <input type="date" id="">
+         <div class="filter">
+            <img src="assets/calendar.svg" alt="ícone de calendário">
+            <input type="date">
          </div>
       </header>
-      <section id="morning">
-         <header>
-            <div class="content">
-               <img src="./assets/morning.svg" alt="ícone de manhã">
-               <h2>Manhã</h2>
-            </div>
-            <span>09h-12h</span>
-         </header>
-         <div class="detail"></div>
-         <ul class="schedules-morning">
-            <li>
-               <strong>09:00</strong>
-               <strong>Rachel <span>/ Eric Clapton</span></strong>
-               <span>Fingerstyle</span>
-               <img src="" alt="">
-            </li>
-            <div class="detail"></div>
-         </ul>
+      <section>
+         <div id="morning" class="sections">
+            <header>
+               <div>
+                  <img src="./assets/morning.svg" alt="ícone de manhã">
+                  <h2>Manhã</h2>
+               </div>
+               <span>09h-12h</span>
+            </header>
+            <ul class="schedules-morning">
+               <!-- <li>
+                  <strong class="hour">09:00</strong>
+                  <strong>Rachel <span class="tutor">/ Eric Clapton</span></strong>
+                  <span class="service">Fingerstyle</span>
+                  <img src="assets/cancel.svg" alt="ícone de cancelar" class="cancel">
+               </li> -->
+            </ul>
+         </div>
+         <div id="afternoon" class="sections">
+            <header>
+               <div>
+                  <img src="assets/afternoon.svg" alt="ícone de tarde">
+                  <h2>Tarde</h2>
+               </div>
+               <span>13h-18h</span>
+            </header>
+            <ul class="schedules-afternoon">
+
+            </ul>
+         </div>
+         <div id="night" class="sections">
+            <header>
+               <div>
+                  <img src="assets/night.svg" alt="ícone de noite">
+                  <h2>Noite</h2>
+               </div>
+               <span>19h-21h</span>
+            </header>
+            <ul class="schedules-night">
+
+            </ul>
+         </div>
       </section>
-      <section id="afternoon">
-         <header>
-            <div class="content">
-               <img src="" alt="">
-               <h2>Tarde</h2>
-            </div>
-            <span>13h-18h</span>
-         </header>
-         <div class="detail"></div>
-         <ul class="schedules-afternoon">
-         </ul>
-      </section>
-      <section id="night">
-         <header>
-            <div class="content">
-               <img src="" alt="">
-               <h2>Noite</h2>
-            </div>
-            <span>19h-21h</span>
-         </header>
-         <div class="detail"></div>
-         <ul class="schedules-night">
-         </ul>
-      </section>
+
+      <div class="new-bg hide">
+         <section id="new">
+            <header>
+               <h1>Agende uma tutoria</h1>
+               <p>Preencha os dados para realizar o agendamento</p>
+            </header>
+            <form action="">
+               <div class="content">
+                  <label for="name-client">Nome</label>
+                  <div class="data">
+                     <img src="assets/user.svg" alt="ícone de usuário">
+                     <input type="text" id="name-client" placeholder="Digite seu nome">
+                  </div>
+               </div>
+               <div class="content">
+                  <label for="name-tutor">Nome do tutor</label>
+                  <div class="data">
+                     <select id="name-tutor">
+                        <option value="guitarist1">Mark Knopfler</option>
+                        <option value="guitarist2">Eric Clapton</option>
+                        <option value="guitarist3">Gary Moore</option>
+                        <option value="guitarist4">David Gilmour</option>
+                        <option value="guitarist5">Jeff Beck</option>
+                        <option value="guitarist6">Stevie Ray Vaughan</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="content">
+                  <label for="service">Descrição do serviço</label>
+                  <textarea id="service" placeholder="Descreva o serviço"></textarea>
+               </div>
+               <div class="content">
+                  <div class="info">
+                     <div>
+                        <label for="date">Data</label>
+                        <div class="filter">
+                           <img src="assets/calendar.svg" alt="ícone de calendário">
+                           <input type="date" id="date">
+                        </div>
+                     </div>
+                     <div>
+                        <label for="hour">Hora</label>
+                        <div class="filter">
+                           <img src="assets/clock.svg" alt="ícone de relógio">
+                           <input type="time" id="hour">
+                        </div>
+                     </div>
+                  </div>
+               </div> 
+               <button>AGENDAR</button>
+            </form>
+         </section>
+      </div>
    </div>
    
    <button>NOVO AGENDAMENTO</button>

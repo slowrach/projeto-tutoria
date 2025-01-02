@@ -46,11 +46,173 @@ p {
 }
 
 section {
-   background: #23242C;
+   display: flex;
+   flex-direction: column;
+   gap: 1.2rem;
 }
 
-.content {
+.sections {
+   background: #23242C;
+   border-radius: 1.2rem;
+}
+
+.sections header div {
    display: flex;
+   gap: 1.2rem;
+}
+
+.sections header {
+   padding: 1.2rem 2rem;
+   border-bottom: 1px solid #2E2C30;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.sections header span {
+   font-size: 1.4rem;
+   line-height: 2.4rem;
+   font-weight: 700;
+}
+
+strong .tutor {
+   font-weight: 400;
+}
+
+ul {
+   padding: 2rem;
+   list-style: none;
+}
+
+li {
+   font-size: 1.3rem;
+   line-height: 1.6rem;
+   align-items: center;
+   display: flex;
+}
+
+li .hour {
+   margin-right: 1.6rem;
+}
+
+li .service {
+   margin-left: 8rem;
+   flex: 1;
+}
+
+#new {
+   margin: 3rem auto;
+   width: 47.7rem;
+   background: #23242C;
+   padding: 4rem;
+   border-radius: 1.2rem;
+}
+
+#new header {
+   margin-bottom: 3rem;
+}
+
+#new form {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+#new label, input, textarea, select {
+   font-family: 'Inter Tight', serif;
+   font-size: 1.4rem;
+   color: #98959D;
+}
+
+#new label {
+   color: #ffffff;
+   line-height: 2.4rem;
+   font-weight: 700;
+}
+
+#new .content {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+#new .content img {
+   width: 2rem;
+}
+
+#new .content .data {
+   padding: 1.2rem;
+   border: 1px solid #3E3C41;
+   border-radius: 0.8rem;
+   display: flex;
+   gap: 0.8rem;
+   align-items: center;
+}
+
+#new .content .data input {
+   border: none;
+   background: transparent;
+   flex: 1;
+   outline: none;
+}
+
+#new .content textarea {
+   height: 8.3rem;
+   background: transparent;
+   border: 1px solid #3E3C41;
+   border-radius: 0.8rem;
+   padding: 1.2rem;
+   outline: none;
+   resize: none;
+}
+
+#new .content .data select {
+   background: transparent;
+   border: none;
+   flex: 1;
+   outline: none;
+}
+
+option {
+   background-color: #23242C;
+}
+
+.filter {
+   display: flex;
+   gap: 0.8rem;
+   border: 1px solid #3E3C41;
+   border-radius: 0.8rem;
+   padding: 1.2rem;
+}
+
+#new .filter {
+   width: 19rem;
+}
+
+.filter input {
+   background: transparent;
+   border: none;
+   outline: none;
+}
+
+.info {
+   display: flex;
+   gap: 1.6rem;
+}
+
+#new button {
+   width: 12.3rem;
+}
+
+.new-bg {
+   background-color: #00000066;
+   backdrop-filter: blur(2px);
+   position: absolute;
+   z-index: 1;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
 }
 
 button {
@@ -58,15 +220,59 @@ button {
    border-radius: 0.8rem;
    background: #9282FA;
    color: #050505;
-   box-shadow: 0 0 4rem 0 #9282fa4d;
-   padding: 1.2rem 2.4rem;
+   padding: 1.2rem;
    border: none;
    font-weight: 700;
+}
+
+button:hover {
+   background: #BDB4FA;
+}
+
+body > button {
+   box-shadow: 0 0 4rem 0 #9282fa4d;
+   padding: 1.2rem 2.4rem;
    position: absolute;
    right: 3rem;
    bottom: 3.3rem;
 }
 
-button:hover {
-   background: #5d5399;
+.hide {
+   display: none;
+}
+
+@media (max-width: 769px) {
+   #app {
+      width: 100%;
+      padding: 10rem 2rem;
+   }
+   
+   #main {
+      flex-direction: column;
+      align-items: start;
+   }
+
+   #main p {
+      margin-bottom: 1.2rem;
+   }
+
+   body > button {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      left: calc(100vw - 21rem);
+   }
+
+   li .service {
+      margin-left: 5rem;
+   }
+
+   #new {
+      margin-top: 10rem;
+      width: 90vw;
+   }
+
+   #new .filter {
+      width: 100%;
+   }
 }
