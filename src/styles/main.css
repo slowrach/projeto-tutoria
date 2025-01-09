@@ -89,6 +89,12 @@ li {
    line-height: 1.6rem;
    align-items: center;
    display: flex;
+   margin-bottom: 1rem;
+}
+
+li + li {
+   padding-top: 1rem;
+   border-top: 1px solid #3E3C41;
 }
 
 li .hour {
@@ -166,8 +172,10 @@ li .service {
    resize: none;
 }
 
-#new .content .data select {
-   background: transparent;
+select {
+   cursor: pointer;
+   -webkit-appearance: none;
+   background: transparent url("../assets/arrow.svg") no-repeat right;
    border: none;
    flex: 1;
    outline: none;
@@ -193,6 +201,7 @@ option {
    background: transparent;
    border: none;
    outline: none;
+   flex: 1;
 }
 
 .info {
@@ -200,19 +209,8 @@ option {
    gap: 1.6rem;
 }
 
-#new button {
+#confirm-button {
    width: 12.3rem;
-}
-
-.new-bg {
-   background-color: #00000066;
-   backdrop-filter: blur(2px);
-   position: absolute;
-   z-index: 1;
-   top: 0;
-   bottom: 0;
-   right: 0;
-   left: 0;
 }
 
 button {
@@ -229,16 +227,60 @@ button:hover {
    background: #BDB4FA;
 }
 
-body > button {
+#new-button {
    box-shadow: 0 0 4rem 0 #9282fa4d;
    padding: 1.2rem 2.4rem;
+   margin: 4rem 0; 
+   position: relative;
+   left: calc(100vw - 23rem);
+}
+
+.new-bg {
+   background-color: #00000066;
+   backdrop-filter: blur(2px);
    position: absolute;
-   right: 3rem;
-   bottom: 3.3rem;
+   z-index: 1;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+}
+
+::-webkit-calendar-picker-indicator {
+   cursor: pointer;
+   background: url("../assets/arrow.svg") no-repeat;
+   
 }
 
 .hide {
    display: none;
+}
+
+.unavailable-hour {
+   color: #2E2C30;
+}
+
+.msg-error {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   color: #FFFFFF;
+   background: #F03E3E;
+   font-size: 1.4rem;
+   font-weight: 700;
+   text-align: center;
+   padding: 1rem 0;
+   visibility: hidden;
+   opacity: 0;
+   transform: translateY(-40px);
+   transition: transform 1s;
+}
+
+.msg-error.appear {
+   transform: translateY(0px);
+   visibility: visible;
+   opacity: 1;
 }
 
 @media (max-width: 769px) {
@@ -256,7 +298,7 @@ body > button {
       margin-bottom: 1.2rem;
    }
 
-   body > button {
+   #new-button {
       position: relative;
       right: 0;
       bottom: 0;

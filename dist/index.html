@@ -10,7 +10,7 @@
    
    <link rel="shortcut icon" href="./src/assets/favicon.png" type="image/x-icon">
    <title>Tutoria</title>
-</head>
+<link rel="icon" href="favicon.png"><script defer src="main.js"></script></head>
 <body>
    <div id="app">
       <header id="main">
@@ -20,7 +20,7 @@
          </div>
          <div class="filter">
             <img src="./src/assets/calendar.svg" alt="ícone de calendário">
-            <input type="date" id="date-select" >
+            <input type="date" class="date">
          </div>
       </header>
       <section>
@@ -32,7 +32,7 @@
                </div>
                <span>09h-12h</span>
             </header>
-            <ul id="schedules-morning">
+            <ul class="schedules-morning">
                <!-- <li>
                   <strong class="hour">09:00</strong>
                   <strong>Rachel <span class="tutor">/ Eric Clapton</span></strong>
@@ -49,7 +49,7 @@
                </div>
                <span>13h-18h</span>
             </header>
-            <ul id="schedules-afternoon">
+            <ul class="schedules-afternoon">
 
             </ul>
          </div>
@@ -61,13 +61,13 @@
                </div>
                <span>19h-21h</span>
             </header>
-            <ul id="schedules-night">
+            <ul class="schedules-night">
 
             </ul>
          </div>
       </section>
 
-      <div class="new-bg hide">
+      <div class="new-bg">
          <div class="msg-error">Selecione um horário disponível</div>
 
          <section id="new">
@@ -120,12 +120,12 @@
                      </div>
                   </div>
                </div> 
-               <button id="confirm-button">AGENDAR</button>
+               <button>AGENDAR</button>
             </form>
          </section>
       </div>
    </div>
    
-   <button id="new-button">NOVO AGENDAMENTO</button>
+   <button>NOVO AGENDAMENTO</button>
 </body>
 </html>

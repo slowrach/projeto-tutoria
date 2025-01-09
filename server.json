@@ -1,0 +1,39 @@
+{
+  "schedules": [
+    {
+      "id": "1736343538982",
+      "client": "Gordon Matthew Sumner",
+      "tutor": "Eric",
+      "service": "Fingerstyle",
+      "when": "2025-01-08T22:00:00.000Z"
+    },
+    {
+      "id": "1736426717456",
+      "client": "RJ Barrett",
+      "tutor": "David Gilmour",
+      "service": "",
+      "when": "2025-01-09T18:00:00.000Z"
+    },
+    {
+      "id": "1736427264088",
+      "client": "Richard",
+      "tutor": "Eric",
+      "service": "",
+      "when": "2025-01-09T12:00:00.000Z"
+    },
+    {
+      "id": "1736428159733",
+      "client": "Raquel",
+      "tutor": "Mark Knopfler",
+      "service": "",
+      "when": "2025-01-09T12:00:00.000Z"
+    },
+    {
+      "id": "1736428291655",
+      "client": "Rayssa",
+      "tutor": "David Gilmour",
+      "service": "",
+      "when": "2025-01-09T12:00:00.000Z"
+    }
+  ]
+}
