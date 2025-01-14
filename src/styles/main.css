@@ -94,7 +94,7 @@ li {
 
 li + li {
    padding-top: 1rem;
-   border-top: 1px solid #3E3C41;
+   border-top: 1px solid #2E2C30;
 }
 
 li .hour {
@@ -246,6 +246,24 @@ button:hover {
    left: 0;
 }
 
+#new-cancel {
+   position: relative;
+   left: 100%;
+   top: -2rem;
+}
+
+button:hover {
+   cursor: pointer;
+}
+
+.cancel:hover {
+   cursor: pointer;
+}
+
+#new-cancel:hover {
+   cursor: pointer;
+}
+
 ::-webkit-calendar-picker-indicator {
    cursor: pointer;
    background: url("../assets/arrow.svg") no-repeat;
@@ -258,29 +276,6 @@ button:hover {
 
 .unavailable-hour {
    color: #2E2C30;
-}
-
-.msg-error {
-   position: absolute;
-   top: 0;
-   right: 0;
-   left: 0;
-   color: #FFFFFF;
-   background: #F03E3E;
-   font-size: 1.4rem;
-   font-weight: 700;
-   text-align: center;
-   padding: 1rem 0;
-   visibility: hidden;
-   opacity: 0;
-   transform: translateY(-40px);
-   transition: transform 1s;
-}
-
-.msg-error.appear {
-   transform: translateY(0px);
-   visibility: visible;
-   opacity: 1;
 }
 
 @media (max-width: 769px) {

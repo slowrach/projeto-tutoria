@@ -1,5 +1,8 @@
 import { schedulesDay } from "../schedules/load"
 
-const selectedDate = document.getElementById("date-select")
+const date = document.getElementById("date")
+const dateSelect = document.getElementById("date-select")
 
-selectedDate.onchange = () => schedulesDay()
+date.onchange = () => schedulesDay(date)
+
+dateSelect.onchange = () => schedulesDay(dateSelect)

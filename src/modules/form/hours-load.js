@@ -24,11 +24,9 @@ export function hoursLoad({ date, dailySchedules }) {
    opening.forEach(({ hour, available }) => {
       const option = document.createElement("option")
 
-      if (!available) {
-         option.classList.add( "unavailable-hour")
+      if (available) {
+         option.textContent = hour
+         hours.append(option)
       }
-
-      option.textContent = hour
-      hours.append(option)
    })
 }
